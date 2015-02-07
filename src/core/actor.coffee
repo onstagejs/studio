@@ -1,7 +1,7 @@
 
 router = require('./router')
 BaseClass = require('./util/baseClass')
-Q = require('q')
+Promise = require('bluebird')
 clone = require('./util/clone')
 ArrayUtil = require('./util/arrayUtil')
 
@@ -36,7 +36,7 @@ class Actor extends BaseClass
   _doProcess:(message) =>
     __doProcess=(message) =>
       {sender,body,receiver,callback,headers} = message
-      Q.fcall(()=>@process(body,headers,sender,receiver)).then((result)->callback(undefined,result)).catch((err)->
+      Promise.attempt(()=>@process(body,headers,sender,receiver)).then((result)->callback(undefined,result)).catch((err)->
         callback(err or new Error('Unexpected Error'))
       )
     if message?.length
