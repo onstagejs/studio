@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/ericholiveira/studio.png?label=ready&title=Ready)](https://waffle.io/ericholiveira/studio)
 Studio.js
 ========
 
