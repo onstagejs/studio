@@ -4,7 +4,7 @@
 	"description": "Hello World Application using Express and Studio",
 	"main": "index.js",
 	"dependencies": {
-		"express": "4.11.1"
+		"express": "4.19.2"
 	},
 	"author": "Erich Oliveira",
 	"license": "MIT"
